@@ -11,8 +11,8 @@ mongoose
 	.then(() => console.log('Connected to: ' + config.get('db')))
 	.catch((err) => console.log(err));
 
-app.use(helmet());
 app.use(express.json());
+app.use(helmet());
 app.use('/api/comments', comments);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));

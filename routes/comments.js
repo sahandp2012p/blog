@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
 	}
 	const schema = {
 		author: Joi.string().required(),
-		name: Joi.string().required(),
+		title: Joi.string().required(),
 		body: Joi.string().required(),
 		post: Joi.number().required()
 	};
