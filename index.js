@@ -1,6 +1,5 @@
 const config = require('config');
 const express = require('express');
-const { default: helmet } = require('helmet');
 const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +11,6 @@ mongoose
 	.catch((err) => console.log(err));
 
 app.use(express.json());
-app.use(helmet());
 app.use('/api/comments', comments);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));
